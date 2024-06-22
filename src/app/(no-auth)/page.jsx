@@ -175,7 +175,8 @@ export default function Home() {
   async function HandlerCheckOut(e) {
 
     //  const data =  Object.entries(calcValue).map((i, index) => `${i[0]}: ${i[1]}`)
-
+    router.push('Solicitud')
+return
 
     const db = Object.entries(calcValue).reverse().reduce((acc, i, index) => {
       const data = `${i[0]}: ${i[1]}\n`
@@ -190,6 +191,7 @@ export default function Home() {
 
   }
   async function HandlerCheckOut2(e) {
+
 
     //  const data =  Object.entries(calcValue).map((i, index) => `${i[0]}: ${i[1]}`)
 

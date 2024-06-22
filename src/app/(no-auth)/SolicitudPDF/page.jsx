@@ -29,7 +29,7 @@ function CotizacionTerrestre() {
     }, [userDB]);
 
     return (
-        <div className="relative flex  justify-center min-h-screen ">
+        <div className="relative flex  justify-center items-center min-h-screen ">
                                     <InvoicePDF />
 
         </div>

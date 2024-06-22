@@ -320,9 +320,8 @@ const PDFView = ({ click }) => {
     console.log(pdfData)
 
     return (
-        <div style={{ display: 'block', background: 'red', width: '100vw', textAlign: 'center', }}>
-            {/* {isCliente && <PDFDownloadLink document={ */}
-            <PDFViewer style={{ width: '100vw', height: '100vh' }}>
+        <div style={{ display: 'block',  width: '100vw', textAlign: 'center', zIndex: '50' }}>
+            {isCliente && <PDFDownloadLink document={
                 <Document style={{ width: '100vw', }}>
                     <Page style={styles.body} size="A4" fixed  >
 
@@ -366,11 +365,6 @@ const PDFView = ({ click }) => {
                                     </View>
                                 </View>
                             </View>
-
-
-
-
-
                             <View style={styles.containerIntroItems}>
 
                                 <View style={styles.introItems}>
@@ -390,13 +384,6 @@ const PDFView = ({ click }) => {
                                     </View>
                                 </View>
                             </View>
-
-
-
-
-
-
-
                             <View style={styles.containerIntroItems}>
                                 <View style={styles.containerIntroItems}>
                                     <View style={styles.introItems}>
@@ -416,11 +403,6 @@ const PDFView = ({ click }) => {
                                     </View>
                                 </View>
                             </View>
-
-
-
-
-
                             <View style={styles.containerIntroItems}>
 
                                 <View style={styles.introItems}>
@@ -440,12 +422,6 @@ const PDFView = ({ click }) => {
                                     <Text style={styles.introText}>{pdfData && pdfData["nombre"] && pdfData["nombre"]}</Text>
                                 </View>
                             </View>
-
-
-
-
-
-
                             <View style={styles.containerIntroItems}>
 
                                 <View style={styles.introItems}>
@@ -465,10 +441,6 @@ const PDFView = ({ click }) => {
                                     <Text style={styles.introText}>{pdfData && pdfData["nombre"] && pdfData["nombre"]}</Text>
                                 </View>
                             </View>
-
-
-
-
                             <View style={styles.containerIntroItems}>
                                 <View style={styles.introItems}>
                                     <Text style={styles.subtitle}>Marsk and Nos <Br /> Container/ Seal No.</Text>
@@ -509,10 +481,6 @@ const PDFView = ({ click }) => {
                                     <Text style={styles.subtitle}>  </Text>
                                 </View>
                             </View>
-
-
-
-
                             <View style={styles.containerIntroItems}>
                                 <View style={styles.introItems}>
                                     <View style={styles.introView2}>
@@ -573,15 +541,12 @@ const PDFView = ({ click }) => {
 
                     </Page>
                 </Document>
+             }
+                fileName={`BILL OF LADING`}>
 
-            </PDFViewer>
+                <Button theme='Primary' click={click}>pdf</Button>
 
-            {/* }
-                fileName={`COTIZACIÓN AEREA ${pdfData && pdfData[`CA-COTIZACION No`] && pdfData[`CA-COTIZACION No`]}`}>
-
-                <Button style={'buttonSecondaryPDF'} click={click}>pdf</Button>
-
-            </PDFDownloadLink>} */}
+            </PDFDownloadLink>} 
         </div>
     )
 }
