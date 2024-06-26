@@ -43,7 +43,7 @@ const db = [
   },
 ]
 
-
+    
 function Componente({ title, image, paragraph }) {
   return <div className='relative bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:min-w-[250px] lg:min-h-[250px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center rounded-[15px] '>
     <img src={image} className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
