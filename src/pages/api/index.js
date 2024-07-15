@@ -15,6 +15,4 @@ bot.on('message', (msg) => {
   }
 });
 
-
-
 }
