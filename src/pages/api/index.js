@@ -1,26 +1,20 @@
-// var html_to_pdf = require('html-pdf-node');
-// var fs = require('fs');
-const nodemailer = require('nodemailer');
+const TelegramBot = require('node-telegram-bot-api');
+
 
 export default function handler(req, res) {
-let transporter = nodemailer.createTransport({
-service: 'gmail',
-auth: {
-user: 'proyection009@gmail.com',
-pass: 'hfyn zmif dudw lihd'
-}
+const token = '7031417747:AAGr4T2ndCANwHiRTrV9RV0S8FjiQJNDeAQ';
+
+const bot = new TelegramBot(token, { polling: true });
+
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  const messageText = msg.text;
+
+  if (messageText === '/start') {
+    bot.sendMessage(chatId, 'Welcome to the bot...!');
+  }
 });
-let mailOptions = {
-from: 'votre.email@gmail.com',
-to: 'proyection009@gmail.com',
-subject: 'Envoi d\'email via Node.js',
-text: 'Bonjour, ceci est un email envoyé via Node.js et Nodemailer.'
-};
-transporter.sendMail(mailOptions, function(error, info){
-if (error) {
-console.log(error);
-} else {
-console.log('Email envoyé: ' + info.response);
-}
-});
+
+
+
 }
